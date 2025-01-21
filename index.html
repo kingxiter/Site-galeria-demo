@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arts</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  
+  <!-- Link para o CSS do Leaflet -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+  <!-- Link para o JavaScript do Leaflet -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+  <header>
+    <a href="#" class="brand">Art.Art</a>
+    <div class="menu-btn"></div>
+    <div class="navigation">
+      <div class="navigation-items">
+        <a href="#home">Início</a>  
+        <a href="#sobre">Sobre</a>  
+        <a href="#faca-parte">Faça parte</a>  
+        <a href="Area de login/index.html">Área do Cliente</a>  
+      </div>   
+    </div>
+  </header>
+
+  <section class="home">
+    <!-- Vídeos -->
+    <video class="video-slide active" src="1.mp4" autoplay muted loop></video>
+    <video class="video-slide" src="2.mp4" autoplay muted loop></video>
+    <video class="video-slide" src="3.mp4" autoplay muted loop></video>
+    <video class="video-slide" src="4.mp4" autoplay muted loop></video>
+    <video class="video-slide" src="5.mp4" autoplay muted loop></video>
+
+    <!-- Conteúdos -->
+    <div class="content active">
+      <h1>Mapa dos<br><span>Artistas</span></h1>
+      <p>Uma jornada onde a imaginação ganha vida, conectando culturas, ideias e emoções. Encontre um artista perto de você.</p>
+      <a href="#">Encontre</a>
+    </div>
+    <div class="content">
+      <h1>Escritores.<br><span>Art</span></h1>
+      <p>A literatura brasileira abrange uma riqueza de temas, explorando a complexidade e diversidade do Brasil.</p>
+      <a href="#">Encontre</a>
+    </div>
+    <div class="content">
+      <h1>Músicos.<br><span>Art</span></h1>
+      <p>Com inspiração e criatividade, eles dão vida a culturas, histórias e sonhos através da música.</p>
+      <a href="#">Encontre</a>
+    </div>
+    <div class="content">
+      <h1>Atores.<br><span>Art</span></h1>
+      <p>Artistas que nos transportam para mundos incríveis por meio da sua atuação e criatividade.</p>
+      <a href="#">Encontre</a>
+    </div>
+    <div class="content">
+      <h1>Circenses.<br><span>Art</span></h1>
+      <p>Transformando habilidades e criatividade em espetáculos que encantam todas as idades.</p>
+      <a href="#">Encontre</a>
+    </div>
+
+    <!-- Ícones de Mídia Social -->
+    <div class="media-icons">
+      <a href="#"><i class="fab fa-facebook-f"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+    </div>
+
+    <!-- Navegação do Slider -->
+    <div class="slider-navigation">
+      <div class="nav-btn active"></div>
+      <div class="nav-btn"></div>
+      <div class="nav-btn"></div>
+      <div class="nav-btn"></div>
+      <div class="nav-btn"></div>
+    </div>
+  </section>
+
+  <section id="sobre" class="about">
+    <h2><mark>Bem-vindo ao Art.Art: Conectando Talentos e Oportunidades</mark></h2>
+    
+      <br>
+    <p>
+      O <strong>Art.Art</strong> é um espaço digital inovador que está sendo criado para reunir artistas de todos os cantos do Brasil e do mundo em um só lugar. Nosso objetivo é ser a ponte entre talentos criativos e contratantes, facilitando conexões, promovendo colaborações e ampliando as possibilidades de trabalho no universo artístico.
+    </p>
+    <h3><mark>O que oferecemos?</mark></h3>
+    <p>
+      <br>
+      No nosso site, artistas de diversas áreas – como músicos, atores, dançarinos, escritores, artistas visuais, circenses, entre outros – podem criar um perfil completo que destaca suas experiências, qualificações, trabalhos anteriores e conquistas.
+    </p>
+    <p>
+      Para contratantes, o Art.Art é um verdadeiro catálogo de talentos. Com filtros avançados, você pode encontrar o profissional ideal para seu projeto, evento ou ideia, de forma simples e prática.
+    </p>
+    <br>
+    <h3><mark>Por que usar o Art.Art?</mark></h3>
+    <br>
+    <ul>
+      <li><strong>Visibilidade Global:</strong> Mostre seu talento para o mundo e alcance novos públicos.</li>
+      <li><strong>Currículos Detalhados:</strong> Acesse informações completas sobre os artistas, incluindo portfólio, qualificações e experiências.</li>
+      <li><strong>Conexão Facilitada:</strong> Simplificamos o contato entre artistas e contratantes, criando um ambiente seguro e confiável para parcerias.</li>
+      <li><strong>Diversidade e Inclusão:</strong> Celebramos a riqueza cultural, conectando talentos de diferentes estilos, culturas e regiões.</li>
+    </ul>
+    
+
+    <section id="carrossel" class="carousel">
+      <h2>Veja Como Está Ficando o Site</h2>
+      <div class="carousel-container">
+        <div class="carousel-images">
+          <img src="img.png" alt="Imagem 1">
+          <img src="img2.png" alt="Imagem 2">
+          <img src="img3.png" alt="Imagem 3">
+          <img src="img4.jpg" alt="Imagem 4">
+          <img src="img5.jpg" alt="Imagem 5">
+        </div>
+        <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+        <button class="next" onclick="moveSlide(1)">&#10095;</button>
+      </div>
+    </section>
+  
+
+    <p><strong>Explore. Conecte-se. Crie.</strong><br>
+       No Art.Art, o mundo da arte se encontra com o mundo das oportunidades!</p>
+
+    <!-- Adicionando o Mapa -->
+    <h3><mark>Explore o Mundo dos Artistas</mark></h3>
+    <p>Movimente o mapa para explorar os talentos ao redor do mundo.</p>
+    <div id="map" style="height: 400px;"></div>
+  </section>
+
+  
+
+  <!-- Seção Faça Parte -->
+  <section id="faca-parte" class="join">
+    <h2><mark>Faça Parte</mark></h2>
+    <p>Junte-se a nós e transforme suas ideias em resultados reais. Clique no botão abaixo para começar!</p>
+    <a href="#" class="btn">FAÇA PARTE AGORA</a>
+  </section>
+
+  <footer>
+    <p>© 2025 Art.Art - Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
