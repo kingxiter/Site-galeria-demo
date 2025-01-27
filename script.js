@@ -80,40 +80,40 @@ setInterval(() => moveSlide(1), 5000);  // Troca de imagem automática a cada 5 
 
 
 
-// Verificar se já existe uma data final salva no localStorage
-let prazoFinal = localStorage.getItem("prazoFinal");
+  // Verificar se já existe uma data final salva no localStorage
+  let prazoFinal = localStorage.getItem("prazoFinal");
 
-if (!prazoFinal) {
-  // Caso não exista, definir o prazo para 30 dias a partir de agora e salvar no localStorage
-  prazoFinal = new Date();
-  prazoFinal.setDate(prazoFinal.getDate() + 30); // Alterado para 30 dias
-  localStorage.setItem("prazoFinal", prazoFinal);
-} else {
-  // Converter a string salva no localStorage de volta para um objeto Date
-  prazoFinal = new Date(prazoFinal);
-}
-
-function atualizarContagemRegressiva() {
-  const agora = new Date().getTime();
-  const diferenca = prazoFinal - agora;
-
-  if (diferenca > 0) {
-    const horas = Math.floor(diferenca / (1000 * 60 * 60));
-    const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
-    const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
-
-    document.getElementById("contador").innerHTML = 
-      `${horas} horas, ${minutos} minutos, ${segundos} segundos restantes`;
+  if (!prazoFinal) {
+    // Caso não exista, definir o prazo para 30 dias a partir de agora e salvar no localStorage
+    prazoFinal = new Date();
+    prazoFinal.setDate(prazoFinal.getDate() + 30); // Alterado para 30 dias
+    localStorage.setItem("prazoFinal", prazoFinal);
   } else {
-    document.getElementById("contador").innerHTML = "A contagem regressiva terminou!";
-    clearInterval(intervalo);
-    localStorage.removeItem("prazoFinal"); // Remover o prazo final quando terminar
+    // Converter a string salva no localStorage de volta para um objeto Date
+    prazoFinal = new Date(prazoFinal);
   }
-}
 
-// Atualizar a cada segundo
-const intervalo = setInterval(atualizarContagemRegressiva, 1000);
+  function atualizarContagemRegressiva() {
+    const agora = new Date().getTime();
+    const diferenca = prazoFinal - agora;
 
-// Inicializar a contagem assim que a página carregar
-atualizarContagemRegressiva();
+    if (diferenca > 0) {
+      const horas = Math.floor(diferenca / (1000 * 60 * 60));
+      const minutos = Math.floor((diferenca % (1000 * 60 * 60)) / (1000 * 60));
+      const segundos = Math.floor((diferenca % (1000 * 60)) / 1000);
+
+      document.getElementById("contador").innerHTML = 
+        `${horas} horas, ${minutos} minutos, ${segundos} segundos restantes`;
+    } else {
+      document.getElementById("contador").innerHTML = "A contagem regressiva terminou!";
+      clearInterval(intervalo);
+      localStorage.removeItem("prazoFinal"); // Remover o prazo final quando terminar
+    }
+  }
+
+  // Atualizar a cada segundo
+  const intervalo = setInterval(atualizarContagemRegressiva, 1000);
+
+  // Inicializar a contagem assim que a página carregar
+  atualizarContagemRegressiva();
 
