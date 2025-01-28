@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <title>Arts</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
@@ -84,7 +83,7 @@
   </section>
 
   <section id="sobre" class="about">
-    <h2><mark>Bem-vindo ao Mapa dos Artistas</mark></h2>
+    <h2><mark>Bem-vindo ao Mapa dos Artistas!</mark></h2>
     <br>
     <p>
       O <strong>Mapa dos Artistas</strong> é um espaço digital inovador que está sendo criado para reunir artistas de todos os cantos do Brasil e do mundo em um só lugar. Nosso objetivo é ser a ponte entre talentos criativos e contratantes, facilitando conexões, promovendo colaborações e ampliando as possibilidades de trabalho no universo artístico.
@@ -144,10 +143,10 @@
       <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin: 10px 0;">
 
       <label for="telefone">Telefone:</label>
-      <input type="tel" id="telefone" name="telefone" required placeholder="(xx) xxxxx-xxxx" pattern="\(\d{2}\) \d{5}-\d{4}" style="width: 100%; padding: 10px; margin: 10px 0;">
+      <input type="tel" id="telefone" name="telefone" required placeholder="xxxxxxxxxxx" pattern="\(\d{2}\) \d{5}-\d{4}" style="width: 100%; padding: 10px; margin: 10px 0;">
 
       <label for="cep">CEP:</label>
-      <input type="text" id="cep" name="cep" required placeholder="xxxxx-xxx" pattern="\d{5}-\d{3}" style="width: 100%; padding: 10px; margin: 10px 0;">
+      <input type="text" id="cep" name="cep" required placeholder="xxxxxxxx" pattern="\d{5}-\d{3}" style="width: 100%; padding: 10px; margin: 10px 0;">
 
       <label for="endereco">Endereço:</label>
       <input type="text" id="endereco" name="endereco" required style="width: 100%; padding: 10px; margin: 10px 0;">
@@ -156,8 +155,16 @@
       <input type="text" id="complemento" name="complemento" style="width: 100%; padding: 10px; margin: 10px 0;">
 
       <label for="especializacao">Especialização Artística:</label>
-      <input type="text" id="especializacao" name="especializacao" required placeholder="Ex.: Dança, Pintura, Teatro, etc." style="width: 100%; padding: 10px; margin: 10px 0;">
-
+      <select id="especializacao" name="especializacao" required style="width: 100%; padding: 10px; margin: 10px 0;">
+        <option value="">Selecione a especialização</option>
+        <option value="pintor">Pintor</option>
+        <option value="escritor">Escritor</option>
+        <option value="dancarino">Dançarino</option>
+        <option value="circense">Circense</option>
+        <option value="musico">Músico</option>
+        <option value="malabarista">Malabarista</option>
+        <option value="outros">Outros</option>
+      </select>
       <label for="plano">Selecione seu Plano:</label>
       <select id="plano" name="plano" required style="width: 100%; padding: 10px; margin: 10px 0;">
           <option value="vip">Plano promocional reservando - R$ 29,00/mês - R$ 348,00 (12 meses) + 6 Meses grátis</option>
