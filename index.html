@@ -167,7 +167,9 @@
       </select>
       <label for="plano">Selecione seu Plano:</label>
       <select id="plano" name="plano" required style="width: 100%; padding: 10px; margin: 10px 0;">
-          <option value="vip">Plano promocional reservando - R$ 29,00/mês - R$ 348,00 (12 meses) + 6 Meses grátis</option>
+          <option value="plano1">Plano promocional reservando - R$ 29,00/mês </option>
+          <option value="plano2">Plano promocional reservando - R$ 29,00/mês - R$ 348,00 (12 meses) + 6 Meses grátis</option>
+          <option value="plano3">Plano promocional reservando - R$ 29,00/mês - R$ 696,00 (12 meses) + 12 Meses grátis</option>
       </select>
 
       <label for="pagamento">Método de Pagamento:</label>
@@ -198,9 +200,27 @@
         })
         .then(response => {
             if (response.ok) {
-                alert('Inscrição enviada com sucesso! Você será redirecionado para o pagamento.');
-                // Redireciona para a página de pagamento
-                window.location.href = 'https://pay.kiwify.com.br/jItZUo1'; 
+                // Captura o plano selecionado
+                const planoSelecionado = document.getElementById('plano').value;
+                
+                let linkPagamento = '';
+
+                // Define o link de pagamento com base no plano
+                if (planoSelecionado === 'plano1') {
+                    linkPagamento = 'https://pay.kiwify.com.br/LJAyRPB'; // Link para o primeiro plano
+                } else if (planoSelecionado === 'plano2') {
+                    linkPagamento = 'https://pay.kiwify.com.br/jItZUo1'; // Link para o segundo plano
+                } else if (planoSelecionado === 'plano3') {
+                    linkPagamento = 'https://pay.kiwify.com.br/lLxafPu'; // Link para o terceiro plano
+                }
+
+                if (linkPagamento) {
+                    alert('Inscrição enviada com sucesso! Você será redirecionado para o pagamento.');
+                    // Redireciona para o link de pagamento do plano escolhido
+                    window.location.href = linkPagamento;
+                } else {
+                    alert('Erro ao selecionar o plano. Por favor, tente novamente.');
+                }
             } else {
                 alert('Erro ao enviar o formulário. Por favor, tente novamente.');
             }
@@ -210,7 +230,9 @@
             alert('Ocorreu um erro inesperado. Tente novamente mais tarde.');
         });
     });
-</script>
+  </script>
+</section>
+
 
 </section>
 
