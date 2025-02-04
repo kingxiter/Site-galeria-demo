@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Arts</title>
+  <title>Mapa dos Artistas</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
@@ -99,10 +99,11 @@
       Apareça em um verdadeiro catálogo de talentos. Com filtros avançados, você poderá ser encontrado para desenvolver projetos ou participar de eventos de forma simples e prática.
     </p>
     <br>
-    <h2><mark>Por que usar o Mapa dos Artistas?</mark></h2>
+    <h2><mark>Por que eu preciso participar Agora?</mark></h2>
     <br>
     <ul>
       <li><strong>Visibilidade Global:</strong> Mostre seu talento para o mundo e alcance novos públicos.</li>
+      <li><strong>Comunidade exclusiva:</strong> Uma grande troca de experiências entre artistas e profissionais da área.</li>
       <li><strong>Currículos Detalhados:</strong> Tenha uma página com informações completas, incluindo portfólio, qualificações e experiências.</li>
       <li><strong>Conexão Facilitada:</strong> Simplificamos o contato entre artistas e contratantes, criando um ambiente seguro e confiável para parcerias.</li>
       <li><strong>Diversidade e Inclusão:</strong> Celebramos a riqueza cultural, conectando talentos de diferentes estilos, culturas e regiões.</li>
@@ -170,8 +171,7 @@
       <label for="plano">Selecione seu Plano:</label>
       <select id="plano" name="plano" required style="width: 100%; padding: 10px; margin: 10px 0;">
           <option value="plano1">Plano promocional reservando - R$ 29,00/mês </option>
-          <option value="plano2">Plano promocional reservando - R$ 29,00/mês - R$ 348,00 (12 meses) + 6 Meses grátis</option>
-          <option value="plano3">Plano promocional reservando - R$ 29,00/mês - R$ 696,00 (12 meses) + 12 Meses grátis</option>
+          <option value="plano2">Anuidade antecipada R$ 9,99 por mês </option>
       </select>
 
       
@@ -206,7 +206,7 @@
                 if (planoSelecionado === 'plano1') {
                     linkPagamento = 'https://pay.kiwify.com.br/LJAyRPB'; // Link para o primeiro plano
                 } else if (planoSelecionado === 'plano2') {
-                    linkPagamento = 'https://pay.kiwify.com.br/jItZUo1'; // Link para o segundo plano
+                    linkPagamento = 'https://checkout.nubank.com.br/DP6VUlPLh3cgvhw'; // Link para o segundo plano
                 } else if (planoSelecionado === 'plano3') {
                     linkPagamento = 'https://pay.kiwify.com.br/lLxafPu'; // Link para o terceiro plano
                 }
